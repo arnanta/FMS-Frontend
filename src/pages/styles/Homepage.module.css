@@ -6,6 +6,8 @@ body {
   width: 100%;
   overflow-x: hidden; /* only hide horizontal scroll */
   font-family: sans-serif;
+  background-color: #f9f7fc;
+  background: linear-gradient(120deg, #f9f9f9, #e6e4f0, #d2cde1);
 }
 
 .parentDiv {
@@ -174,7 +176,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1rem; /* keep it tight */
+  padding: 1rem 1rem;
   width: 100%;
   gap: 2rem;
   flex-wrap: wrap;
@@ -182,14 +184,25 @@ body {
 }
 
 .bottomImageDiv {
-  margin-left: 2rem;
+  background: linear-gradient(to bottom, #f9f9f9, #e6e4f0, #dcd1e9);
+  padding: 1rem;
+  border-radius: 16px;
 }
 
 .bottomImage {
-  height: 200px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
   border-radius: 12px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(203, 187, 221, 0.3)
+  );
+  background-blend-mode: overlay;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  opacity: 0.94;
+  transition: transform 0.3s ease;
 }
 
 .uploadTextSection {
