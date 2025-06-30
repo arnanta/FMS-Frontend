@@ -2,8 +2,12 @@ import style from "./styles/Homepage.module.css";
 import { Link } from "react-router-dom";
 import image from "../assets/FMS-logo-photoaidcom-cropped.png";
 import sideImage from "../assets/side-image.png";
-
+import { useNavigate } from "react-router-dom";
 const HomePage = () => {
+  const navigate = useNavigate();
+  const navigateToOptionsPage = () => {
+    navigate("/options");
+  };
   return (
     <div className={style.parentDiv}>
       <div className={style.container}>
@@ -44,7 +48,9 @@ const HomePage = () => {
             every action is just a few clicks away, making it easier than ever
             to stay productive.
           </p>
-          <button className={style.bodyButton}>Get Started</button>
+          <button className={style.bodyButton} onClick={navigateToOptionsPage}>
+            Get Started
+          </button>
         </div>
 
         {/* Bottom content - Upload files Section */}
